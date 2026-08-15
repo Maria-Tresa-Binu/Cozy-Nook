@@ -47,9 +47,13 @@ export default function PixelScene({ rain, fire, sketching, swayingTail }: Props
 
         {/* fireplace glow on the right */}
         <rect x="76" y="34" width="18" height="22" fill="#2C3A34" />
-        <g className="animate-flicker" opacity={0.35 + fire * 0.65}>
-          <rect x="80" y="44" width="10" height="10" fill="#E0A458" />
-          <rect x="82" y="40" width="6" height="6" fill="#F2C078" />
+        {/* volume opacity and the flicker animation must live on separate nodes:
+            the animation's own opacity keyframes override the attribute. */}
+        <g opacity={0.35 + fire * 0.65}>
+          <g className="animate-flicker">
+            <rect x="80" y="44" width="10" height="10" fill="#E0A458" />
+            <rect x="82" y="40" width="6" height="6" fill="#F2C078" />
+          </g>
         </g>
 
         {/* armchair */}
