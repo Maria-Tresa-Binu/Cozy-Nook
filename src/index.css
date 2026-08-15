@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+    margin: 0;
+    background: transparent;
+  }
+
+  body {
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+    font-family: ui-rounded, "Nunito", "Segoe UI", system-ui, sans-serif;
+    color: #faf6ee;
+  }
+}
+
+@layer components {
+  .slider-track {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 6px;
+    border-radius: 9999px;
+    background: rgba(250, 246, 238, 0.18);
+    outline: none;
+  }
+
+  .slider-track::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 9999px;
+    background: #e0a458;
+    border: 2px solid #faf6ee;
+    cursor: pointer;
+  }
+
+  .slider-track::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border-radius: 9999px;
+    background: #e0a458;
+    border: 2px solid #faf6ee;
+    cursor: pointer;
+  }
+}

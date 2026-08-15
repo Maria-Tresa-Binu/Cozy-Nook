@@ -1,0 +1,19 @@
+[package]
+name = "cozy-nook-widget"
+version = "0.1.0"
+description = "Cozy Nook Widget - a compact ambient sound desktop widget"
+authors = ["Maria Tresa Binu"]
+edition = "2021"
+rust-version = "1.77.2"
+
+[lib]
+name = "cozy_nook_widget_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["tray-icon"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
