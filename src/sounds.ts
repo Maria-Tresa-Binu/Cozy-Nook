@@ -10,7 +10,7 @@ export type SoundDef = {
   id: SoundId;
   label: string;
   emoji: string;
-  /** Placeholder royalty-free loop used during development. */
+  /** Bundled asset under `public/sounds/`, or a remote royalty-free loop. */
   src: string;
   /** Timbre used by the offline synth fallback when `src` cannot be loaded. */
   fallback: "rain" | "fire" | "pencil" | "brush" | "cafe" | "keyboard";
@@ -51,7 +51,7 @@ export const SOUNDS: SoundDef[] = [
     id: "brush",
     label: "Hairbrushing ASMR",
     emoji: "\u{1F9F9}",
-    src: "https://cdn.pixabay.com/audio/2022/10/30/audio_37f0e2f5b8.mp3",
+    src: "/sounds/brush.mp3",
     fallback: "brush",
     defaultVolume: 0.0,
   },
