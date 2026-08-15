@@ -49,7 +49,6 @@ export function useMixer(): Mixer {
       const audio = new Audio();
       audio.loop = true;
       audio.preload = "auto";
-      audio.crossOrigin = "anonymous";
       audio.volume = 0;
       audio.src = sound.src;
       created.set(sound.id, audio);
