@@ -20,10 +20,12 @@ Built with **Tauri v2 + React + Vite + Tailwind CSS**.
 
 ## Audio sources
 
-`src/sounds.ts` holds the source for each track. **Hairbrushing ASMR** ships bundled at
-`public/sounds/brush.mp3` (6-minute seamless-ish excerpt, mono 64 kbps, loudness-normalised);
-the remaining tracks still point at placeholder royalty-free loop URLs. To ship your own audio,
-drop files into `public/sounds/` and point each `src` at `/sounds/<id>.mp3`.
+`src/sounds.ts` holds the source for each track. **Rainfall** (`public/sounds/rain.mp3`) and
+**Hairbrushing ASMR** (`public/sounds/brush.mp3`) ship bundled: 6-minute excerpts, mono 64 kbps,
+loudness-normalised to about -21 LUFS with true peak under -1 dBTP and 0.3 s fades so the
+`loop` wrap doesn't click. The remaining four tracks still point at placeholder royalty-free
+loop URLs. To ship your own audio, drop files into `public/sounds/` and point each `src` at
+`/sounds/<id>.mp3`.
 
 If a URL cannot be loaded (offline dev, blocked host), each track falls back to a shaped-noise
 WebAudio synth so the mixer stays audible and testable.

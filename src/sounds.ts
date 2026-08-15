@@ -27,7 +27,7 @@ export const SOUNDS: SoundDef[] = [
     id: "rain",
     label: "Rainfall",
     emoji: "\u{1F327}\uFE0F",
-    src: "https://cdn.pixabay.com/audio/2022/03/10/audio_c8c8a73467.mp3",
+    src: "/sounds/rain.mp3",
     fallback: "rain",
     defaultVolume: 0.6,
   },
